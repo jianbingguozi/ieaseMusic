@@ -11,7 +11,7 @@
         "build:main": "cross-env NODE_ENV=production node script/build.js",
         "dev:vite": "cross-env NODE_ENV=development vite",
         "build:vite": "cross-env NODE_ENV=production vite build",
-        "build": "npm run build:main && npm run build:vite && electron-builder"
+        "build": "cross-env ELECTRON_MIRROR='https://npm.taobao.org/mirrors/electron/' npm run build:main && npm run build:vite && electron-builder"
     },
     "build": {
         "productName": "ieaseMusic",
